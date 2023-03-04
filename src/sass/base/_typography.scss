@@ -1,0 +1,13 @@
+.header{
+    padding:2rem 3rem;
+}
+
+.heading{
+
+    font-family:'Comfortaa', cursive;
+
+    &--primary{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+}
