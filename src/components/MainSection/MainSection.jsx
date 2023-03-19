@@ -1,12 +1,14 @@
+import Form from '../Form/Form';
 import './_mainSection.scss'
 
-function MainSection(){
 
-    return(
+function MainSection() {
+
+    return (
         <>
-        <section className="mainSection">
-
-        </section>
+            <section className="mainSection">
+                <Form />
+            </section>
         </>
     )
 }
