@@ -1,11 +1,11 @@
 import "./_form.scss";
-import { getAllZones, getZoneTime } from "../timeServer";
+import { getAllZones, getZoneTime, getZoneDefault} from "../timeServer";
 import { useState, useEffect, useRef } from "react";
 let zones = getAllZones();
 
 
 function Form() {
-    const [selectedValue, setSelectedValue] = useState(zones[0]);
+    const [selectedValue, setSelectedValue] = useState(getZoneDefault());
     const [selectedTime, setSelectedTime] = useState("select a time zone and hit Get Time");
     const intervalRef = useRef(null);
 
