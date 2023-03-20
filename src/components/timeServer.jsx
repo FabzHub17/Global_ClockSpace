@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 import { getTimeZones, rawTimeZones, timeZonesNames, abbreviations } from "@vvo/tzdb";
 
-const now = DateTime.now();
+
 
 
 function getAllZones() {
@@ -15,10 +15,19 @@ function getZoneTime(zone) {
     );
 }
 
+function getZoneDefault() {
+    const dt = DateTime.now();
+    return (
+        dt.zoneName
+    );
+}
 
-// function getDefaultZone() {
-//     let defaultZone = moment().tz.setDefault(String);
-//     return (defaultZone);
+// function getCurrentTime() {
+//     const now = DateTime.now();
+//     return (
+//         now.toLocaleString(DateTime.DATETIME_MED)
+//     );
 // }
 
-export { getAllZones, getZoneTime };
+
+export { getAllZones, getZoneTime, getZoneDefault };
